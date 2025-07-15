@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -65,7 +67,7 @@ export function QuizTextInput({
 
   return (
     <div className={compact ? "w-full" : "w-full max-w-md mx-auto"}>
-      <Card className={compact ? "p-4 bg-muted/30 shadow-sm border" : "p-6 bg-quiz-card shadow-quiz border-0"}>
+      <Card className={compact ? "p-4 bg-muted/30 shadow-sm border" : "p-6 bg-quiz-card shadow-lg border-0"}>
         {/* Header */}
         <div className="flex items-center mb-6">
           {onBack && (

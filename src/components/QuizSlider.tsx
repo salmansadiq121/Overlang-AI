@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -38,7 +40,7 @@ export function QuizSlider({
 
   return (
     <div className={compact ? "w-full" : "w-full max-w-md mx-auto"}>
-      <Card className={compact ? "p-4 bg-muted/30 shadow-sm border" : "p-6 bg-quiz-card shadow-quiz border-0"}>
+      <Card className={compact ? "p-4 bg-muted/30 shadow-sm border" : "p-6 bg-quiz-card shadow-lg border-0"}>
         {/* Header */}
         <div className="flex items-center mb-6">
           {onBack && (
@@ -83,13 +85,13 @@ export function QuizSlider({
             {/* Age markers */}
             <div className="flex justify-between text-xs text-muted-foreground mt-2">
               <span>{min}</span>
-              <span>14</span>
+              <span>25</span>
+              <span>35</span>
               <span>45</span>
-              <span>20</span>
-              <span>30</span>
-              <span>45</span>
-              <span>60</span>
+              <span>55</span>
               <span>65</span>
+              <span>75</span>
+              <span>85</span>
               <span>{max}</span>
             </div>
           </div>

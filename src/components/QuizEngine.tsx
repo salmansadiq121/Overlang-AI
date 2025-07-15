@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useEffect } from 'react';
 import { QuizSlider } from './QuizSlider';
 import { QuizMultiChoice } from './QuizMultiChoice';
@@ -5,7 +7,6 @@ import { QuizSingleChoice } from './QuizSingleChoice';
 import { QuizTextInput } from './QuizTextInput';
 import { ChatInterface } from './ChatInterface';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { ChatMessage, QuizState } from '@/types/quiz';
 import { quizQuestions } from '@/data/quizQuestions';
 import { MessageSquare, FileText } from 'lucide-react';
@@ -154,8 +155,6 @@ export function QuizEngine() {
       }));
     }, 1500);
   };
-
-  // Remove unused function
 
   const formatAnswerForChat = (question: any, value: any): string => {
     switch (question.type) {
